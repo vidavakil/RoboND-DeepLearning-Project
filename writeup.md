@@ -11,6 +11,7 @@
 
 [//]: # (Image References)
 
+[image0]: ./misc_images/follow_me_snapshot
 [image1]: ./misc_images/network_architecture
 [image2]: ./misc_images/follow_me_training_loss.png
 
@@ -23,10 +24,6 @@
 #### 1. Provide a write-up / README document including all rubric items addressed in a clear and concise manner. The document can be submitted either in either Markdown or a PDF format.
 
 You're reading it!
-
-(The write-up / README should include a statement and supporting figures / images that explain how each rubric item was addressed, and specifically where in the code each step was handled. The write-up should include a discussion of what worked, what didn't and how the project implementation could be improved going forward.
-
-This report should be written with a technical emphasis (i.e. concrete, supporting information and no 'hand-waiving'). Specifications are met if a reader would be able to replicate what you have done based on what was submitted in the report. This means all network architecture should be explained, parameters should be explicitly stated with factual justifications, and plots / graphs are used where possible to further enhance understanding. A discussion on potential improvements to the project submission should also be included for future enhancements to the network / parameters that could be used to increase accuracy, efficiency, etc. It is not required to make such enhancements, but these enhancements should be explicitly stated in its own section titled "Future Enhancements".)
 
 ### Project Description
 
@@ -56,7 +53,7 @@ Below are some reasons why FCNs, and this particular architecture, is used for t
 
 - Batch normalization is a technique that is used to normalize the distribution of the inputs to a layer over the given input batch. Normalized (versus skewed) batches make the task of learning and gradient descent easier, because the loss surface as a function of network weights will be locally more like a nice round bowl, than a stretched and skewed one. On a nice bowl, gradients always point to the bottom of the bowl, thus reaching the bottom of the bowl happens faster.
 
-- The purpose of the 1x1 convolution in the middle of the FCN network is to condense the input image into a smaller image, with many more channels, that capture important features about the image.
+- The purpose of the 1x1 convolution in the middle of the FCN network is to condense the input image into a smaller image, with many more channels, that capture important features about the image. A 1x1 convolution takes each pixel of an N-channel input tensor, and linearly combines them into the corresponding pixel of an M-channel output tensor, using shared weights across all pixel locations. 
 
 - The decoder part of the network then takes the condensed image and its channels and gradually upsamples it into the final segmented output image. In doing that, the decoder layers take input also from the encoder layers, via skip connections that pass along higher resolution local information to the decoder layers. 
 
