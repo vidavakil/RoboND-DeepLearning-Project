@@ -11,8 +11,8 @@
 
 [//]: # (Image References)
 
-[image0]: ./misc_images/follow_me_snapshot
-[image1]: ./misc_images/network_architecture
+[image0]: ./misc_images/follow_me_snapshot.png
+[image1]: ./misc_images/network_architecture.png
 [image2]: ./misc_images/follow_me_training_loss.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1155/view) Points
@@ -29,6 +29,8 @@ You're reading it!
 
 The goal of this project is to build a neural network model for image segmentation, and to train, validate, and deploy it in the Follow Me project, to enables a drone to track and follow a single hero target using the model.
 
+![alt text][image0] 
+
 ### Network Architecture
 
 Following the course instructions, the network architecture used for this project is an FCN (Fully Convolutional Network), where all layers are convolutional. The network consists of an encoder and a decoder, separated by a 1x1 convolutional layer, with skip connections between the encoder and decoder layers. 
@@ -41,7 +43,7 @@ The encoder and the 1x1 convolution layers use Relu activation function and batc
 
 Below image shows a block diagram of the network.
 
-![alt text][image_1] 
+![alt text][image1] 
 
 Below are some reasons why FCNs, and this particular architecture, is used for the image segmentation task at hand.
 
@@ -219,7 +221,7 @@ The code creates a checkpoint after each epoch if the validation loss is better 
 
 Below shows the training curve for the submitted model:
 
-![alt text][image_2] 
+![alt text][image2] 
 
 ### Results
 
